@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+:root{
+    --clr-primary: hsl(205, 78%, 60%);
+    --transition: all 0.3s linear;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -13,6 +18,7 @@ body{
     height: 70px;
     background: #fffa;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 .wrapper{
     width: 1240px;
@@ -44,8 +50,20 @@ nav .logo{
     text-decoration: none;
     /* color: #021718; */
 }
-a{
+.nav-toggle{
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+    color: var(--clr-primary);
+}
+.nav-items li a{
     text-decoration: none;
+}
+a:active, a:hover{
+    /* background: ; */
+    transition: .5s;
 }
 .nav-items li:nth-last-of-type(1){
     margin: 0;
@@ -125,7 +143,7 @@ header{
     font-weight: bolder;
     text-transform: capitalize;
 }
-button{
+.card-button{
     display: inline-block;
     background-color: #16e0e7a9;
     border-radius: 50px;
@@ -188,3 +206,12 @@ button{
   background-color:rgb(38, 197, 171);
   padding:5px;
 }
+
+/* @media only screen and (max-width: 600px) {
+    .nav-container{
+        height: 70px;
+        background: #fffa;
+        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+} */
