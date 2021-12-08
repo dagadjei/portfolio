@@ -30,6 +30,9 @@ nav{
     justify-content: space-between;
     height: 70px;
 }
+.nav-toggle{
+    display: none;
+}
 nav ul{
     display: flex;
 }
@@ -49,14 +52,6 @@ nav .logo{
     font-style: normal;
     text-decoration: none;
     /* color: #021718; */
-}
-.nav-toggle{
-    font-size: 1.5rem;
-    background: transparent;
-    border-color: transparent;
-    transition: var(--transition);
-    cursor: pointer;
-    color: var(--clr-primary);
 }
 .nav-items li a{
     text-decoration: none;
@@ -207,11 +202,28 @@ header{
   padding:5px;
 }
 
-/* @media only screen and (max-width: 600px) {
-    .nav-container{
-        height: 70px;
-        background: #fffa;
-        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+@media only screen and (max-width: 600px) {
+    .nav-items{
+        height: 0;
+        overflow: hidden;
+        transition: var(--transition);
     }
-
-} */
+    .nav-toggle{
+        font-size: 1.5rem;
+        background: transparent;
+        border-color: transparent;
+        transition: var(--transition);
+        cursor: pointer;
+        color: var(--clr-primary);
+        display: block;
+    }
+    .show-links{
+        height: 10rem;
+    }
+    .logo{
+        padding: 30px;
+    }
+    .header-container{
+        padding: 30px;
+    }
+} 
