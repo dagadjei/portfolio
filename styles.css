@@ -202,7 +202,7 @@ header{
   padding:5px;
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     .nav-items{
         height: 0;
         overflow: hidden;
@@ -226,4 +226,4 @@ header{
     .header-container{
         padding: 30px;
     }
-} 
+}  */
